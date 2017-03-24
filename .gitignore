@@ -9,10 +9,10 @@
 *.css.map
 
 # Project
-/dev
-/sample_proj/**/dev/
-/app/**/dev/
-/lib/**/dev/
+# /dev
+# /sample_proj/**/dev/
+# /app/**/dev/
+# /lib/**/dev/
 /lib/**/*.js
 /deploy/**/*.js
 /setting/**/*.js
