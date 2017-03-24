@@ -159,8 +159,7 @@ async function nginx_install() {
 //        valid until 20-Jan-2017 + 365 days
 
 function nginx_template() {
-  return `# The following directive is already set in docnet
-# server_tokens off;
+  return `
 
 upstream ${config.proj_name} {
   server localhost:${config.webapp_port};
