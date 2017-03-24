@@ -2,8 +2,8 @@
 
 ```
 # Create Python virtual env
-virtualenv -p python3 /home/pedro/dev/sample_proj/venv
-source /home/pedro/dev/sample_proj/venv/bin/activate
+virtualenv -p python3 ~/dev/sample_proj/venv
+source ~/dev/sample_proj/venv/bin/activate
 
 # Install requirements
 pip install -r requirements.txt -r dev/requirements.txt
