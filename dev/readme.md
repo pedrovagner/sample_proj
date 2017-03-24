@@ -26,6 +26,6 @@ python manage.py runserver --insecure
 
 # Deploy
 
-**Caution**: Run this code only if you want deploy this project into a Raspberry Pi PC:
+**Caution**: Run the following command only if you want deploy this project into a **Raspberry Pi PC**.
 
 ```npm run deploy```

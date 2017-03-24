@@ -38,6 +38,4 @@ Running all tests:
 
 # Deploy
 
-**Caution**: Run this code only if you want deploy this project into a Raspberry Pi PC:
-
-[Raspberry Pi PC deploy](dev/readme.md)
+**Caution**: Run [this code](dev/readme.md) only if you want deploy this project into a **Raspberry Pi PC**.
