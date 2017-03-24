@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+
+{% block banner %}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="big">Sample Project</h1>
+        <p>Project used to test things.</p>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block menu %}
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="navbar-header">
+            <a class="navbar-toggle collapsed pull-left{% block home_active %}{% endblock %}"
+               href="{% url 'home' %}">Home</a>
+            <a class="navbar-toggle collapsed pull-left{% block credit_card_active %}{% endblock %}"
+               href="{% url 'credit_card:index' %}">Credit Card</a>
+          </div>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+        <ul class="nav navbar-nav">
+          <li class="hidden-xs{% block home_active_collapse %}{% endblock %}">
+            <a href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="hidden-xs{% block credit_card_active_collapse %}{% endblock %}">
+            <a href="{% url 'credit_card:index' %}">Credit Card</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+{% endblock %}
+
+{% block flashes %}
+  {% if messages %}
+    <div class="container-fluid">
+      {% for message in messages %}
+        <div class="alert{% for tag in message.tags.split %} alert-{{ tag }}{% endfor %}"
+             role="alert">{{ message }}</div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h2>Welcome</h2>
+            <hr/>
+            <p>Hi, welcome to Sample Project.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

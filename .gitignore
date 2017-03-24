@@ -1,0 +1,40 @@
+# Compiled output
+/dist
+/tmp
+/temp
+*.py[cod]
+# *.js
+*.js.map
+# *.css
+*.css.map
+
+# Project
+/dev
+/sample_proj/**/dev/
+/app/**/dev/
+/lib/**/dev/
+/lib/**/*.js
+/deploy/**/*.js
+/setting/**/*.js
+
+# Dependencies
+/node_modules
+/bower_components
+
+# Django
+db.sqlite3
+/media
+/static_root
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+*.launch
+.settings/
+/.vscode
+
+#System Files
+.DS_Store
+Thumbs.db
+.directory

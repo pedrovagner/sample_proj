@@ -1,0 +1,56 @@
+{
+  "name": "sample_proj",
+  "version": "0.0.1",
+  "description": "Project used to test things.",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": "6.x",
+    "npm": "3.x"
+  },
+  "scripts": {
+    "deploy": "NODE_ENV=development node -e 'require(\"./deploy/manage.js\").deploy()'",
+    "deploy-without-npm": "NODE_ENV=development node -e 'require(\"./deploy/manage.js\").deploy(npm = false)'",
+    "heroku-prebuild": "echo This runs before Heroku installs your dependencies.",
+    "heroku-postbuild": "echo This runs afterwards.",
+    "install-remote": "SECRET=EdXbciPURaur4Jo5KBYTkZpkTaeAtNc2P3TADMPoy NODE_ENV=production node -e 'require(\"./deploy/install.js\").remote()'",
+    "install-remote-without-npm": "SECRET=EdXbciPURaur4Jo5KBYTkZpkTaeAtNc2P3TADMPoy NODE_ENV=production node -e 'require(\"./deploy/install.js\").remote(npm = false)'",
+    "gulp": "gulp",
+    "node-sass": "node-sass",
+    "postinstall": "if [ -z \"$npm_config_production\" ]; then bower install; fi",
+    "start": "if [ -n \"$npm_config_production\" ]; then npm run prod; else npm run dev; fi",
+    "dev": "DEBUG=sample_proj:* NODE_ENV=development node $NODE_DEBUG_OPTION ./util/repl",
+    "prod": "SECRET=EdXbciPURaur4Jo5KBYTkZpkTaeAtNc2P3TADMPoy NODE_ENV=production node ./bin/www"
+  },
+  "dependencies": {
+    "core-js": "^2.4.1",
+    "debug": "^2.6.0",
+    "i18n": "^0.8.3",
+    "moment": "^2.14.1",
+    "nunjucks": "^2.4.2",
+    "request": "^2.75.0",
+    "validator": "git+https://github.com/chriso/validator.js.git#6.1.0",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.38",
+    "@types/node": "^7.0.1",
+    "@types/request": "0.0.39",
+    "@types/validator": "^6.2.0",
+    "@types/winston": "^2.2.0",
+    "autoprefixer": "^6.4.0",
+    "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.7",
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.1.1",
+    "gulp-sass": "^2.3.2",
+    "http-server": "^0.9.0 ",
+    "minimist": "^1.2.0",
+    "mocha": "^3.0.2",
+    "node-sass": "^3.8.0",
+    "node-ssh": "^4.0.0",
+    "postcss-css-variables": "^0.5.2",
+    "typescript": "^2.1.5"
+  }
+}

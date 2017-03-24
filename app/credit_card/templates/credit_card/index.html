@@ -1,0 +1,57 @@
+{% extends 'credit_card/base.html' %}
+
+
+{% block content %}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h2>Credit Card Validation</h2>
+            <hr/>
+            <form class="form-horizontal" action="{% url 'credit_card:index' %}"
+                  method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+
+              {% if form.errors %}
+                <div class="alert alert-danger" role="alert">
+                  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                  Form validation error. Please, fix the red fields.<br/>
+                </div>
+              {% endif %}
+
+            {% for error in form.non_field_errors %}
+              <div class="alert alert-danger">{{ error }}</div>
+            {% endfor %}
+
+              <div class="form-group{% if form.errors %} has-error{% endif %}">
+                <label class="col-sm-2 control-label" for="file">{{ form.file.label }}</label>
+                <div class="col-sm-10">
+                  <div style="margin-bottom: 0" class="panel panel-default">
+                    <div style="line-height: 30px; padding: 10px" class="panel-body">
+                      <input style="display: inline-block" type="file" id="{{ form.file.id_for_label }}"
+                             name="{{ form.file.html_name }}" aria-describedby="{{ form.file.id_for_label }}-help" {# accept="image/*" #}/>
+                    </div>
+                  </div>
+                  <div class="help-block" id="{{ form.file.id_for_label }}-help">{{ form.file.help_text }}</div>
+                  {% for error in form.file.errors %}
+                    <div class="help-block">{{ error }}</div>
+                  {% endfor %}
+                </div>
+              </div>
+              <hr/>
+              <ul class="list-inline">
+                <li class="pull-right">
+                  <a class="btn btn-default" href="{% url 'home' %}">Cancel</a>
+                </li>
+                <li class="pull-right">
+                  <button class="btn btn-primary" type="submit">Validate</button>
+                </li>
+              </ul>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
