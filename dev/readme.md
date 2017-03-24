@@ -14,7 +14,7 @@ pip install -r requirements.txt -r dev/requirements.txt
 # Create django migrations
 python manage.py migrate
 
-# Install JS dependencies
+# Install JS dependencies (bower automatically executed)
 npm install
 
 # Run server
@@ -25,5 +25,7 @@ python manage.py runserver --insecure
 ```
 
 # Deploy
+
+**Caution**: Run this code only if you want deploy this project into a Raspberry Pi PC:
 
 ```npm run deploy```

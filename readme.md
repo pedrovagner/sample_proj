@@ -23,7 +23,7 @@ pip install -r requirements.txt
 # Create django migrations
 python manage.py migrate
 
-# Install JS dependencies
+# Install JS dependencies (bower automatically executed)
 npm install
 
 # Run server
@@ -37,5 +37,7 @@ Running all tests:
 ```python manage.py test website credit_card```
 
 # Deploy
+
+**Caution**: Run this code only if you want deploy this project into a Raspberry Pi PC:
 
 [Raspberry Pi PC deploy](dev/readme.md)
