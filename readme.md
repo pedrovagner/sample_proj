@@ -1,15 +1,22 @@
 # Sample Project
 
-This is a Django project composed with the following applications:
+This is a `Django` project composed with the following applications:
 
 * [Website](app/website/readme.md)
 * [Credit Card Validator](app/credit_card/readme.md)
 
-Requires `Python 3`, `node 6.x`, `npm 3.x` and `bower`.
+## Notes
+
+Most of the `TypeScript` code in this project is used only in the deployment process.
 
 # Development
 
+Requires `Python 3`, `node 6.x`, `npm 3.x` and `bower`.
+
 ```
+# Create the project's settings file
+echo "from .settings_development import *" > sample_proj/settings.py
+
 # Install requirements
 pip install -r requirements.txt
 
@@ -20,8 +27,14 @@ python manage.py migrate
 npm install
 
 # Run server
-DJANGO_SETTINGS_MODULE=sample_proj.settings_development python manage.py runserver
+python manage.py runserver
 ```
+
+# Running Tests
+
+Running all tests: 
+
+```python manage.py test website credit_card```
 
 # Deploy
 

@@ -6,6 +6,7 @@
 *.pyc
 __pycache__/
 dev/
+/sample_proj/settings.py
 /.idea
 /.directory
 /Thumbs.db

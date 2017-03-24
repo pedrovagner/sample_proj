@@ -5,6 +5,9 @@
 virtualenv -p python3 ~/dev/sample_proj/venv
 source ~/dev/sample_proj/venv/bin/activate
 
+# Create the project's settings file
+echo "from .settings_development import *" > sample_proj/settings.py
+
 # Install requirements
 pip install -r requirements.txt -r dev/requirements.txt
 
@@ -15,10 +18,10 @@ python manage.py migrate
 npm install
 
 # Run server
-DJANGO_SETTINGS_MODULE=sample_proj.settings_development python manage.py runserver
+python manage.py runserver
 
 # Run server with DEBUG = False and Django serve static files
-DJANGO_SETTINGS_MODULE=sample_proj.settings_development python manage.py runserver --insecure
+python manage.py runserver --insecure
 ```
 
 # Deploy

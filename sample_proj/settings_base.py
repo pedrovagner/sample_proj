@@ -3,7 +3,7 @@ Common to production and development settings.
 """
 from os import path
 import sys
-from .settings import *
+from .settings_default import *
 
 
 sys.path.insert(0, os.path.join(BASE_DIR, 'app'))

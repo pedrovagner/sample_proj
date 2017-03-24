@@ -11,8 +11,6 @@
   "scripts": {
     "deploy": "NODE_ENV=development node -e 'require(\"./deploy/manage.js\").deploy()'",
     "deploy-without-npm": "NODE_ENV=development node -e 'require(\"./deploy/manage.js\").deploy(npm = false)'",
-    "heroku-prebuild": "echo This runs before Heroku installs your dependencies.",
-    "heroku-postbuild": "echo This runs afterwards.",
     "install-remote": "SECRET=EdXbciPURaur4Jo5KBYTkZpkTaeAtNc2P3TADMPoy NODE_ENV=production node -e 'require(\"./deploy/install.js\").remote()'",
     "install-remote-without-npm": "SECRET=EdXbciPURaur4Jo5KBYTkZpkTaeAtNc2P3TADMPoy NODE_ENV=production node -e 'require(\"./deploy/install.js\").remote(npm = false)'",
     "gulp": "gulp",

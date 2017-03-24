@@ -9,6 +9,7 @@
 *.css.map
 
 # Project
+/sample_proj/settings.py
 # /dev
 # /sample_proj/**/dev/
 # /app/**/dev/
