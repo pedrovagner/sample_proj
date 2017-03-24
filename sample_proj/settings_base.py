@@ -13,6 +13,8 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = path.join(BASE_DIR, 'media') + path.sep
 STATIC_ROOT = path.join(BASE_DIR, 'static_root') + path.sep
 
+TEMPLATES[0]['DIRS'] = [os.path.join(BASE_DIR, 'templates')]
+
 INSTALLED_APPS += [
     # Project's apps
     'credit_card',
