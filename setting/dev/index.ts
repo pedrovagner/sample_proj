@@ -14,5 +14,6 @@ export default class DevConfig extends base.Config {
   data_dir = path.join(this.data_base_dir, this.proj_name);
   log_dir = path.join(this.data_dir, 'log');
   media_dir = path.join(this.data_dir, 'media');
+  venv_dir = path.join(this.data_dir, 'venv');
   secret = 'EdXbciPURaur4Jo5KBYTkZpkTaeAtNc2P3TADMPoy';
 }
