@@ -155,9 +155,6 @@ async function nginx_install() {
   await exec(`sudo nginx -s reload`);
 }
 
-// TODO: Create a script to auto renew ssl self certificate. Current certificate
-//        valid until 20-Jan-2017 + 365 days
-
 function nginx_template() {
   return `
 
