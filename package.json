@@ -27,7 +27,6 @@
     "debug": "^2.6.0",
     "i18n": "^0.8.3",
     "moment": "^2.14.1",
-    "nunjucks": "^2.4.2",
     "request": "^2.75.0",
     "validator": "git+https://github.com/chriso/validator.js.git#6.1.0",
     "winston": "^2.2.0"
